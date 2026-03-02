@@ -1,16 +1,54 @@
-# React + Vite
+# Personal Professional Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Screenshot](./images/portfolio-screenshot.png)
 
-Currently, two official plugins are available:
+## 📋 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my personal portfolio website built as **Task 1** of my Full Stack Web Development Internship at **Future Interns**. The portfolio showcases my skills, projects, and professional journey as a web developer.
 
-## React Compiler
+**Internship:** Full Stack Web Development  
+**Task:** #1 - Personal Professional Portfolio Website  
+**Duration:** February 2026 - March 2026  
+**Live Demo:** [View Portfolio](https://your-username.github.io/FUTURE_FS_01)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Core Sections
+
+- **Hero Section** – Professional introduction with role and tagline
+- **About Me** – Personal background, skills, and career goals
+- **Skills** – Technical and professional skills with visual indicators
+- **Projects** – Showcase of completed work with descriptions and links
+- **Resume/CV** – Downloadable resume and professional experience
+- **Contact Form** – Functional contact form with email notifications
+- **Social Links** – LinkedIn, GitHub, and other professional profiles
+
+### Technical Features
+
+- ✅ Fully responsive design (mobile, tablet, desktop)
+- ✅ SEO-friendly structure with meta tags
+- ✅ Fast loading and optimized images
+- ✅ Interactive UI elements
+- ✅ Form validation and email integration
+- ✅ Accessible design (WCAG guidelines)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology     | Purpose                                    |
+| -------------- | ------------------------------------------ |
+| **HTML5**      | Structure and semantic markup              |
+| **Tailwind**   | Styling, responsive design                 |
+| **JavaScript** | Interactive elements and form handling     |
+| **React.js**   | Component-based UI architecture            |
+| **Node.js**    | Backend API for contact form               |
+| **Express.js** | Server framework                           |
+| **Nodemailer** | Email notifications from contact form      |
+| **Git/GitHub** | Version control and repository hosting     |
+
+---
+
+## 📁 Project Structure

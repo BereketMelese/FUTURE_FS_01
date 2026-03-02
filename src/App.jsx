@@ -4,13 +4,13 @@ import Navbar from "./components/Navbar";
 import ProjectsSection from "./components/ProjectsSection";
 import ScrollDots from "./components/ScrollDots";
 import ContactsSection from "./components/ContactsSection";
+import SkillsExperienceSection from "./components/SkillsExperienceSection";
 import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <ThemeProvider>
       <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
-        Demo
         <Navbar />
         <ScrollDots />
         <div id="hero">
@@ -18,6 +18,9 @@ const App = () => {
         </div>
         <div id="projects">
           <ProjectsSection />
+        </div>
+        <div id="skills">
+          <SkillsExperienceSection />
         </div>
         <div id="contact">
           <ContactsSection />
