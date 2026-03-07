@@ -1,65 +1,91 @@
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-center justify-between pt-24 py-16 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-      {/* Left Side - Text Content */}
-      <div className="flex-1 text-center md:text-left mb-12 md:mb-0">
-        <p className="text-gray-600 dark:text-gray-400 mb-3 text-lg">
-          Hello, I'm
-        </p>
-
-        <h1 className="text-5xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-blue-500">
-          Bereket Melese
-        </h1>
-
-        <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-          Web Developer / Freelancer
-        </p>
-
-        <p className="text-gray-600 dark:text-gray-400 max-w-lg mb-10 leading-relaxed">
-          I build responsive, user-friendly websites and web applications with
-          clean code and modern design principles.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-          <a
-            href="#contact"
-            className="px-8 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200 shadow-sm"
-          >
-            Let's Connect
-          </a>
-
-          <a
-            href="/cv"
-            className="px-8 py-3 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white font-medium rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
-          >
-            Download CV
-          </a>
-        </div>
+    <section className="relative overflow-hidden min-h-screen flex items-center pt-24 px-6 md:px-12 lg:px-24">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-8 -left-16 h-56 w-56 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute -bottom-14 right-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
       </div>
 
-      {/* Right Side - Profile Image */}
-      <div className="flex-1 flex justify-center md:justify-end">
-        <div className="relative">
-          {/* Simple profile image with border */}
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-700 shadow-lg">
-            <img
-              src="/images/profile.jpg"
-              alt="Profile"
-              className="w-full h-full object-cover"
-            />
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center py-14 md:py-20">
+        <div className="text-center lg:text-left">
+          <p className="inline-flex items-center rounded-full border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 px-4 py-1.5 text-sm font-medium mb-6">
+            Full Stack Web Developer
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
+            Building clean,
+            <span className="block text-blue-600 dark:text-blue-400">
+              user-focused digital experiences
+            </span>
+          </h1>
+
+          <p className="mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Hi, I am Bekkas. I craft responsive interfaces and scalable backends
+            with React, Node.js, and modern web tools. I love turning ideas into
+            products that feel fast, intuitive, and reliable.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start">
+            {["React", "Node.js", "Tailwind CSS", "JavaScript", "MongoDB"].map(
+              (skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300"
+                >
+                  {skill}
+                </span>
+              ),
+            )}
           </div>
 
-          {/* Simple tech badges - minimal */}
-          <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-full p-3 shadow-md border border-gray-200 dark:border-gray-700">
-            <img src="/images/react.png" alt="React" className="w-8 h-8" />
+          <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <a
+              href="#projects"
+              className="px-7 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md shadow-blue-500/20"
+            >
+              View Projects
+            </a>
+            <a
+              href="#contact"
+              className="px-7 py-3 rounded-lg font-medium bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              Let&apos;s Connect
+            </a>
           </div>
+        </div>
 
-          <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-full p-3 shadow-md border border-gray-200 dark:border-gray-700">
-            <img
-              src="/images/javascript.png"
-              alt="JavaScript"
-              className="w-8 h-8"
-            />
+        <div className="flex justify-center lg:justify-end">
+          <div className="relative w-70 h-70 sm:w-85 sm:h-85 lg:w-97.5 lg:h-97.5">
+            <div className="absolute inset-0 rounded-4xl bg-linear-to-br from-blue-500/20 via-cyan-500/10 to-transparent dark:from-blue-400/15 dark:via-cyan-400/10 dark:to-transparent" />
+
+            <div className="absolute inset-4 rounded-[1.75rem] overflow-hidden border border-gray-200 dark:border-gray-700 shadow-2xl bg-white dark:bg-gray-800">
+              <img
+                src="/images/profile.jpg"
+                alt="Bekkas portrait"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-2xl p-3 shadow-lg border border-gray-200 dark:border-gray-700">
+              <img src="/images/react.png" alt="React" className="w-8 h-8" />
+            </div>
+
+            <div className="absolute -bottom-5 -left-5 bg-white dark:bg-gray-800 rounded-2xl p-3 shadow-lg border border-gray-200 dark:border-gray-700">
+              <img
+                src="/images/javascript.png"
+                alt="JavaScript"
+                className="w-8 h-8"
+              />
+            </div>
+
+            <div className="absolute bottom-4 right-3 rounded-xl bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 px-3 py-2 shadow-lg">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Experience
+              </p>
+              <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                10+ projects built
+              </p>
+            </div>
           </div>
         </div>
       </div>
