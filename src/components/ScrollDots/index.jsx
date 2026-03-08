@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const sections = [
@@ -82,7 +82,7 @@ export default function ScrollDots() {
 
   return (
     <div className="fixed right-6 lg:right-10 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center pointer-events-none">
-      <motion.div
+      <Motion.div
         className="relative flex flex-col items-center pointer-events-auto"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -106,7 +106,7 @@ export default function ScrollDots() {
           />
 
           {/* Blue filling line */}
-          <motion.div
+          <Motion.div
             className="absolute w-0.5 bg--to-b from-blue-500 to-blue-400 rounded-full origin-top shadow-[0_0_12px_#3b82f6aa]"
             style={{
               top: `${TRACK_TOP}px`,
@@ -127,7 +127,7 @@ export default function ScrollDots() {
             const isPast = index < activeIndex;
 
             return (
-              <motion.button
+              <Motion.button
                 key={section.id}
                 onClick={() => scrollTo(section.id)}
                 className="group relative outline-none focus-visible:ring-2 focus-visible:ring-blue-500/80 rounded-full"
@@ -138,7 +138,7 @@ export default function ScrollDots() {
               >
                 <div className="relative flex h-5 w-5 items-center justify-center">
                   {isActive && (
-                    <motion.div
+                    <Motion.div
                       className="absolute inset-0 rounded-full border-2 border-blue-500/60"
                       initial={{ scale: 0.9, opacity: 0.7 }}
                       animate={{ scale: 2.0, opacity: 0 }}
@@ -150,7 +150,7 @@ export default function ScrollDots() {
                     />
                   )}
 
-                  <motion.div
+                  <Motion.div
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       isActive
                         ? "bg-blue-500 shadow-[0_0_14px_#3b82f6cc]"
@@ -169,7 +169,7 @@ export default function ScrollDots() {
                   />
                 </div>
 
-                <motion.span
+                <Motion.span
                   className="absolute right-full mr-5 px-3 py-1.5 text-sm font-medium bg-gray-900/95 dark:bg-white/95 text-white dark:text-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap"
                   initial={{ x: -8, opacity: 0 }}
                   whileHover={{ x: 0, opacity: 1 }}
@@ -177,12 +177,12 @@ export default function ScrollDots() {
                 >
                   {section.label}
                   <div className="absolute top-1/2 -right-1.5 w-3 h-3 bg-gray-900/95 dark:bg-white/95 rotate-45 -translate-y-1/2" />
-                </motion.span>
-              </motion.button>
+                </Motion.span>
+              </Motion.button>
             );
           })}
         </div>
-      </motion.div>
+      </Motion.div>
     </div>
   );
 }
